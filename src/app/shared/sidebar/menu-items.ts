@@ -11,8 +11,16 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/dashboard',
-    title: 'Dashboard',
+    title: 'Dashboard222',
     icon: 'mdi mdi-gauge',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/kpi/home',
+    title: 'กำกับติดตามตัวชี้วัด',
+    icon: 'mdi mdi-blur-radial',
     class: '',
     extralink: false,
     submenu: []

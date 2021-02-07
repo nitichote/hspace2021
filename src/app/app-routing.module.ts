@@ -14,6 +14,10 @@ export const Approutes: Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
+        path: 'kpi',
+        loadChildren: () => import('./kpiscore/kpiscore.module').then(m => m.KpiscoreModule)
+      },
+      {
         path: 'component',
         loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
       }
