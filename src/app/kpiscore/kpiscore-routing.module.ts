@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HosviewComponent } from './hosview.component';
 import { KpiHomeComponent } from './kpi-home.component';
 import { KpiShowComponent } from './kpi-show.component';
 
@@ -8,12 +9,17 @@ const routes: Routes = [{
   children: [
     {
       path: 'home',
-     component:KpiHomeComponent
-    },
-   {
+     component:KpiHomeComponent,
+     children: [
+      { path: '', redirectTo: 'show', pathMatch: 'full' },
+      { path: 'hosview', component: HosviewComponent },
+      {
       path: 'show',
      component:KpiShowComponent
     }
+    ]
+    },
+   
   ]
 },
 {
